@@ -6,7 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 50px;
+    padding: 0px 50px;
+    margin-top: 150px;
 }
 
 .container {
@@ -18,6 +19,7 @@
     box-shadow: 0 0 20px rgb(33 33 33 / 40%);
     border-radius: 1rem;
     z-index: 1;
+    font-size: 7px;
 }
 
 .container::before {
@@ -47,6 +49,7 @@ form{
     padding: 2rem 0;
     border-radius: 1rem;
     box-shadow: 0 0 20px rgb(33 33 33 / 60%);
+    font-size: 1rem;
 }
 
 .group {
@@ -103,13 +106,14 @@ form{
 .member {
     text-align: center;
 }
-.member a {
+.a-btn {
     text-decoration: none;
     color: #59515e;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.member a span {
+.a-btn span {
     color: #59515e;
     font-size: 1.5rem;
     padding-bottom: 2px;

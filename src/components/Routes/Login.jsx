@@ -1,7 +1,13 @@
 import React from "react";
 import '../../css/login.css'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+  let handleClick = () => {};
+
   return ( 
   <div>
     <div id="sign-up">
@@ -22,7 +28,7 @@ const Login = () => {
                     <button type="button">Log in</button>
                 </div>
                 <div className="member">
-                    <a href="#">Do you want to be a member? <span>Sign up</span></a>
+                    <a className='a-btn' onClick={handleClick = () => navigate('/signup') }>Do you want to be a member?<span> Sign up</span></a>
                 </div>
             </form>
         </div>
