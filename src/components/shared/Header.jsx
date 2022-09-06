@@ -4,7 +4,7 @@ import '../../css/header.css'
 
 const Header = () => {
   return (
-    <header>
+    <header className="header-nav">
         <a href="#" className="logo">E-commerce</a>
 
         <div className="bx bx-menu" id="menu-icon"></div>
