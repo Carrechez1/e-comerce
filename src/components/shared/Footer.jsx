@@ -25,7 +25,7 @@ const Footer = () => {
     </section>
     <footer>
         <div className="footer">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, explicabo!</p>
+            <p>© Academlo 2022</p>
         </div>
     </footer>
     </div>
