@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
-
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Routes/Home";
 import ProductDetail from "./components/Routes/ProductDetail";
 import Login from "./components/Routes/Login";
 import Purchases from "./components/Routes/Purchases";
 import Header from "./components/shared/Header";
-<<<<<<< HEAD
-import axios from "axios";
-=======
 import Signup from "./components/Routes/Signup";
->>>>>>> 9b168f8f02f388f076596718e60c54569e94501f
 
 function App() {
   // const [count, setCount] = useState(0);
