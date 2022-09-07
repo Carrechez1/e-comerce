@@ -5,18 +5,21 @@ import getConfig from "../../utils/getConfig";
 const Cart = () => {
   /************************** */
   const [cartProducts, setCartProducts] = useState();
+
   /************************** */
   const getAllProductsCart = () => {
     const URL = "https://ecommerce-api-react.herokuapp.com/api/v1/cart";
     axios
       .get(URL, getConfig())
-      .then((res) => console.log(res.data.data.cart.product))
+      .then((res) => setCartProducts(res.data.data.cart.products))
       .catch((err) => setCartProducts());
   };
+  console.log(cartProducts);
   useEffect(() => {
     getAllProductsCart();
   }, []);
   const handleChecout = () => {
+    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/purchases`;
     const obj = {
       street: "Green St. 1456",
       colony: "Southwest",
@@ -24,16 +27,15 @@ const Cart = () => {
       city: "USA",
       references: "Some references",
     };
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/purchases
-`;
     axios
-      .get(URL, obj, getConfig())
+      .post(URL, obj, getConfig())
       .then((res) => {
         console.log(res.data);
         getAllProductsCart();
       })
       .catch((err) => console.log(err));
   };
+  console.log(cartProducts);
   return (
     <section className="cart">
       <h2 className="cart__title">Cart</h2>
