@@ -1,35 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import '../../css/header.css'
 
 const Header = () => {
   return (
-    <header className="header">
-      <NavLink to="/">
-        <h1 className="header__logo">E-commerce</h1>
-      </NavLink>
-      <nav className="header__nav">
-        <ul className="header__list">
-          <li className="header__">
-            <NavLink
-              to="/login"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Login
-            </NavLink>
-          </li>
-          <li className="header__">
-            <NavLink
-              to="/purchases"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Purchase
-            </NavLink>
-          </li>
-          <li className="header__">
-            <h2>Cart</h2>
-          </li>
+    <header className="header-nav">
+        <a href="#" className="logo">E-commerce</a>
+
+        <div className="bx bx-menu" id="menu-icon"></div>
+
+        <ul className="navbar">
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">Faq</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+        
+        <div className="icons">
+            <a href=""><i className='bx bx-search-alt-2'></i></a>
+            <a href=""><i className='bx bx-user'></i></a>
+            <a href=""><i className='bx bx-shopping-bag'></i></a>
+        </div>
     </header>
   );
 };
