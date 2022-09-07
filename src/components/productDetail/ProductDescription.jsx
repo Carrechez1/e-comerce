@@ -3,18 +3,19 @@ import React, { useState } from "react";
 const ProductDescription = ({ productInfo, tot }) => {
   /*************************** */
   const val = tot;
+
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(val);
   /*************************** */
   const handlePlus = () => {
     setCount(count + 1);
-    setPrice(tot * (count + 1));
+    setPrice(val * (count + 1));
   };
 
   const handleRes = () => {
     if (count > 1) {
       setCount(count - 1);
-      setPrice(tot * (count - 1));
+      setPrice(val * (count - 1));
     }
   };
   /*************************** */
@@ -31,9 +32,13 @@ const ProductDescription = ({ productInfo, tot }) => {
         <article className="product__descQuantify">
           <h3 className="produc__descQuantifyTit">quantify</h3>
           <div className="product__descQuantifyCount">
-            <button onClick={handleRes}>-</button>
+            <button className="product__descQuantifyBut" onClick={handleRes}>
+              <strong>-</strong>
+            </button>
             <div>{count}</div>
-            <button onClick={handlePlus}>+</button>
+            <button className="product__descQuantifyBut" onClick={handlePlus}>
+              <strong>+</strong>
+            </button>
           </div>
         </article>
       </div>

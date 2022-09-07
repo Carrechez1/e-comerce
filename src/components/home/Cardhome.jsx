@@ -6,19 +6,20 @@ const Cardhome = ({ product }) => {
   const handleClick = () => {
     navigate(`/product/${product.id}`);
   };
-
+  // console.log(product.title);
   return (
-    <article onClick={handleClick} className="card__container">
-      <header className="card__header">
-        <img className="card__img" src={product.productImgs[0]} alt="" />
+    <article onClick={handleClick} className="card-home__container">
+      <header className="card-home__header">
+        <img className="card-home__img" src={product.productImgs[0]} alt="" />
+        {/* <img className="card-home__img-2" src={product.productImgs[2]} alt="" /> */}
       </header>
-      <div className="card__body">
-        <h3 className="card__name">{product.title}</h3>
-        <section className="card__price">
-          <h4 className="card__pricetitle">price</h4>
-          <span className="card__priceinfo">{product.price}</span>
+      <div className="card-home__body">
+        <h3 className="card-home__name">{product.title}</h3>
+        <section className="card-home__price">
+          <h4 className="card-home__pricetitle">Price</h4>
+          <span className="card-home__priceinfo">{`$ ${product.price}`}</span>
         </section>
-        <button className="card__btn">
+        <button className="card-home__btn">
           <i className="bx bxs-cart"></i>
         </button>
       </div>

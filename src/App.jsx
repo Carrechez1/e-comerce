@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Routes/Home";
 import ProductDetail from "./components/Routes/ProductDetail";
@@ -10,7 +8,22 @@ import Footer from "./components/shared/Footer";
 import Signup from "./components/Routes/Signup";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   const URL = "https://ecommerce-api-react.herokuapp.com/api/v1/users";
+  //   const obj = {
+  //     firstName: "Jose",
+  //     lastName: "Carrero",
+  //     email: "josedasda@yop.com",
+  //     password: "12345678",
+  //     phone: "1234567891",
+  //     role: "admin",
+  //   };
+  //   axios
+  //     .post(URL, obj)
+  //     .then((res) => console.log(res.data))
+  //     .catch((err) => console.log(err.response.data));
+  // }, []);
 
   return (
     <div className="App">
