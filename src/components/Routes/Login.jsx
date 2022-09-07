@@ -12,7 +12,7 @@ const Login = () => {
   <div>
     <div id="sign-up">
         <div className="container">
-            <span className="heading">Sign up</span>
+            <span className="heading">Log in</span>
             <form>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>

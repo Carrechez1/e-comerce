@@ -7,8 +7,8 @@
     align-items: center;
     justify-content: center;
     padding: 0px 50px;
-    margin-top: 120px;
-    margin-bottom: 100px;
+    margin-top: 190px;
+    margin-bottom: 180px;
 }
 
 .container {
@@ -69,7 +69,7 @@ form{
     padding: 1rem 0;
     margin-top: .6rem;
     color:#59515e;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .group > i {
@@ -93,7 +93,7 @@ form{
     margin: 3rem auto;
     outline: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     border-radius: 5rem;
 }
@@ -110,13 +110,13 @@ form{
 .a-btn {
     text-decoration: none;
     color: #59515e;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
 .a-btn span {
     color: #59515e;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-bottom: 2px;
     border-bottom: 2px solid #59515e;
 }
@@ -133,5 +133,10 @@ form{
         transform: initial;
         border-radius: initial;
         box-shadow: none;
+    }
+    #sign-up {
+        padding: 0;
+        margin-top: 15rem;
+        margin-bottom: 15rem;
     }
 }

@@ -6,6 +6,7 @@ import ProductDetail from "./components/Routes/ProductDetail";
 import Login from "./components/Routes/Login";
 import Purchases from "./components/Routes/Purchases";
 import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 import Signup from "./components/Routes/Signup";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/purchases" element={<Purchases />} />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

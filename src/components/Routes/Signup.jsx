@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import '../../css/signup.css'
 
 const Signup = () => {
 
@@ -11,7 +12,7 @@ const Signup = () => {
     <div>
       <div id="sign-up">
         <div className="container">
-            <span className="heading">Log in</span>
+            <span className="heading">Sign up</span>
             <form>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
