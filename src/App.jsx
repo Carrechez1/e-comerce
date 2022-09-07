@@ -6,11 +6,9 @@ import ProductDetail from "./components/Routes/ProductDetail";
 import Login from "./components/Routes/Login";
 import Purchases from "./components/Routes/Purchases";
 import Header from "./components/shared/Header";
-<<<<<<< HEAD
-import axios from "axios";
-=======
 import Signup from "./components/Routes/Signup";
->>>>>>> 9b168f8f02f388f076596718e60c54569e94501f
+import Cart from "./components/shared/Cart";
+import ProtectedRoutes from "./components/Routes/ProtectedRoutes";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -37,8 +35,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/purchases" element={<Purchases />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/purchases" element={<Purchases />} />
+        </Route>
       </Routes>
     </div>
   );
