@@ -32,9 +32,13 @@ const ProductDescription = ({ productInfo, tot }) => {
         <article className="product__descQuantify">
           <h3 className="produc__descQuantifyTit">quantify</h3>
           <div className="product__descQuantifyCount">
-            <button onClick={handleRes}>-</button>
+            <button className="product__descQuantifyBut" onClick={handleRes}>
+              <strong>-</strong>
+            </button>
             <div>{count}</div>
-            <button onClick={handlePlus}>+</button>
+            <button className="product__descQuantifyBut" onClick={handlePlus}>
+              <strong>+</strong>
+            </button>
           </div>
         </article>
       </div>
