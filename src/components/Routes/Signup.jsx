@@ -1,5 +1,7 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import '../../css/signup.css'
+import { useForm } from 'react-hook-form'
 
 const Signup = () => {
 
@@ -11,36 +13,36 @@ const Signup = () => {
     <div>
       <div id="sign-up">
         <div className="container">
-            <span className="heading">Log in</span>
+            <span className="heading">Sign up</span>
             <form>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input type="text" placeholder="Enter your first name"></input>
+                    <input type="text" id='firstName' placeholder="Enter your first name"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input type="text" placeholder="Enter your last name"></input>
+                    <input type="text" id='lastName' placeholder="Enter your last name" />
                     <span className="col"></span>
                 </div>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input type="email" placeholder="Enter email"></input>
+                    <input type="text" id='email' placeholder="Enter your email"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">
                     <i className='bx bxs-lock'></i>
-                    <input type="password" placeholder="Enter your password"></input>
+                    <input type="text" id='Password' placeholder="Enter your password"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input type="text" placeholder="Enter your phone"></input>
+                    <input type="text" id='phone' placeholder="Enter your phone"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input type="text" placeholder="Enter your rol"></input>
+                    <input type="text" id='role' placeholder="Enter your role"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">

@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
-
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Routes/Home";
 import ProductDetail from "./components/Routes/ProductDetail";
 import Login from "./components/Routes/Login";
 import Purchases from "./components/Routes/Purchases";
 import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 import Signup from "./components/Routes/Signup";
-import Cart from "./components/shared/Cart";
 import ProtectedRoutes from "./components/Routes/ProtectedRoutes";
 
 function App() {
@@ -37,10 +35,11 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route element={<ProtectedRoutes />}>
-          <Route path="/cart" element={<Cart />} />
           <Route path="/purchases" element={<Purchases />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../../css/header.css";
 
 const Header = () => {
   const navigate = useNavigate();
+
   let handleClick = () => {};
+
   return (
     <header className="header-nav">
       <div onClick={(handleClick = () => navigate("/"))} className="logo">
@@ -15,24 +17,38 @@ const Header = () => {
 
       <ul className="navbar">
         <li>
-          <a href="#shop">Shop</a>
+          <a href="#shop" className="links">
+            Shop
+          </a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" className="links">
+            About
+          </a>
         </li>
         <li>
-          <a href="#faq">Faq</a>
+          <a href="#faq" className="links">
+            Faq
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact" className="links">
+            Contact
+          </a>
         </li>
       </ul>
 
       <div className="icons">
-        <span onClick={(handleClick = () => navigate("/login"))}>
-          <i className="bx bx-user"></i>
-        </span>
         <a href="">
+          <i className="bx bx-search-alt-2"></i>
+        </a>
+        <a className="a-btn" onClick={(handleClick = () => navigate("/login"))}>
+          <i className="bx bx-user"></i>
+        </a>
+        <a
+          className="a-btn"
+          onClick={(handleClick = () => navigate("/purchases"))}
+        >
           <i className="bx bx-shopping-bag"></i>
         </a>
       </div>
