@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import '../../css/formLogin.css'
 
-const FormLogin = ({setIsLooged}) => {
+const FormLogin = ({setIsLogged}) => {
 
     const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ const FormLogin = ({setIsLooged}) => {
         .then(res => {
           console.log(res.data)
           localStorage.setItem('token',res.data.data.token)
-          setIsLooged(res.data.data.user)
+          setIsLogged(res.data.data.user)
         })
         .catch(err => console.log(err))
       reset({

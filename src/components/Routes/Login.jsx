@@ -6,19 +6,19 @@ import FormLogout from '../login/FormLogOut'
 
 const Login = () => {
 
-    const [isLogged, setIsLooged] = useState()
+    const [isLogged, setIsLogged] = useState()
 
     useEffect(() => {
-      setIsLooged(localStorage.getItem('token'))
+      setIsLogged(localStorage.getItem('token'))
     }, [])
   
     return (
       <main className='login'>
         {
           isLogged ?
-            <FormLogOut setIsLooged={setIsLooged} isLogged={isLogged} />
+            <FormLogOut setIsLogged={setIsLogged} isLogged={isLogged} />
           :
-            <FormLogin setIsLooged={setIsLooged} />
+            <FormLogin setIsLogged={setIsLogged} />
         }
       </main>
     )

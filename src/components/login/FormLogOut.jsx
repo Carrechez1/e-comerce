@@ -2,10 +2,10 @@ import React from 'react'
 import '../../css/formLogin.css'
 import { useForm } from 'react-hook-form'
 
-const FormLogOut = ({isLogged, setIsLooged}) => {
+const FormLogOut = ({isLogged, setIsLogged}) => {
 
   const handleClick = () => {
-    setIsLooged()
+    setIsLogged()
     localStorage.removeItem('token')
   }
 
