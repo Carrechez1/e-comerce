@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import FormLogin from '../login/FormLogin'
-import FormLogout from '../login/FormLogOut'
+import FormLogOut from '../login/FormLogOut'
 
 const Login = () => {
 

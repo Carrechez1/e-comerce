@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../css/formLogin.css'
+import '../../css/formLogOut.css'
 import { useForm } from 'react-hook-form'
 
 const FormLogOut = ({isLogged, setIsLogged}) => {

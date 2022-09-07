@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import getConfig from "../../utils/getConfig";
+import getConfig from "../../store/utils/getConfig";
 
 const Cardhome = ({ product, getAllProductsCart }) => {
   const navigate = useNavigate();
@@ -11,14 +11,14 @@ const Cardhome = ({ product, getAllProductsCart }) => {
 
   const handleAddCart = (e) => {
     e.stopPropagation();
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/cart`;
+    const URL = "https://ecommerce-api-react.herokuapp.com/api/v1/cart";
     const obj = {
       id: product.id,
-      cuantity: 1,
+      quantity: 1,
     };
     axios
       .post(URL, obj, getConfig())
-      .then(() => getAllProductsCart())
+      .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
 
@@ -26,7 +26,7 @@ const Cardhome = ({ product, getAllProductsCart }) => {
     <article onClick={handleClick} className="card-home__container">
       <header className="card-home__header">
         <img className="card-home__img" src={product.productImgs[0]} alt="" />
-        {/* <img className="card-home__img-2" src={product.productImgs[2]} alt="" /> */}
+        <img className="card-home__img-2" src={product.productImgs[2]} alt="" />
       </header>
       <div className="card-home__body">
         <h3 className="card-home__name">{product.title}</h3>
