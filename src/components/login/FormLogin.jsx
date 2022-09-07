@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import '../../css/formLogin.css'
+import axios from 'axios'
 
 const FormLogin = ({setIsLogged}) => {
 
@@ -34,7 +35,7 @@ const FormLogin = ({setIsLogged}) => {
             <form onSubmit={handleSubmit(submit)}>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input {...register('email')} type="email" id="email" placeholder="Enter email"></input>
+                    <input {...register('email')} type="email" id="email" placeholder="Enter email"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">
@@ -43,7 +44,7 @@ const FormLogin = ({setIsLogged}) => {
                     <span className="col"></span>
                 </div>
                 <div className="group">
-                    <button type="button">Log in</button>
+                    <button type="button" onClick={handleSubmit(submit)}>Log in</button>
                 </div>
                 <div className="member">
                     <a className='a-btn' onClick={handleClick = () => navigate('/signup') }>Do you want to be a member?<span> Sign up</span></a>

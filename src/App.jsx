@@ -7,6 +7,7 @@ import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
 import Signup from "./components/Routes/Signup";
 import ProtectedRoutes from "./components/Routes/ProtectedRoutes";
+import Cart from "./components/Routes/Cart";
 
 function App() {
   // const [count, setCount] = useState(0);
