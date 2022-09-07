@@ -4,7 +4,10 @@ import ProductDetail from "./components/Routes/ProductDetail";
 import Login from "./components/Routes/Login";
 import Purchases from "./components/Routes/Purchases";
 import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 import Signup from "./components/Routes/Signup";
+import ProtectedRoutes from "./components/Routes/ProtectedRoutes";
+import Cart from "./components/Routes/Cart";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -31,9 +34,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/purchases" element={<Purchases />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path='/product/:id' element={<ProductDetail />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path='/purchases' element={<Purchases />} />
+          <Route path='/cart' element={<Cart />} />
+        </Route>
       </Routes>
+      <Footer />
     </div>
   );
 }
