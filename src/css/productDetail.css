@@ -5,15 +5,17 @@
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 10%);
+  padding-top: 2%;
 }
 .product__header {
-  padding-top: 40px;
+  padding-top: 80px;
   grid-column: 1/11;
   grid-row: 1/2;
   display: flex;
 }
 .product__returnHome {
   padding-left: 15px;
+  padding-top: 21px;
   font-size: 25px;
   cursor: pointer;
   display: inline-block;
@@ -22,6 +24,7 @@
   color: orangered;
   font-size: 18px;
   margin: 15px;
+  padding-top: 13px;
 }
 .product__headerTitle {
   margin-top: 25px;
@@ -42,16 +45,30 @@
 }
 .product__descName {
   margin-top: 0;
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+.product__descInfo {
+  margin-bottom: 60px;
 }
 .product__body {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 
   justify-items: center;
+  margin-bottom: 60px;
+}
+.product__descPriceTit {
+  margin-bottom: 15px;
 }
 .product__descQuantifyCount {
   display: flex;
-  gap: 12px;
+  gap: 20px;
+  margin-top: 15px;
+}
+.product__descQuantifyBut {
+  border: none;
+  font-size: 16px;
 }
 .product__descFooter {
   background-color: #f85555;
