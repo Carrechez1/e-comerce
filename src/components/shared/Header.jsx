@@ -13,12 +13,12 @@ const Header = () => {
         <a href="#" className="logo">E-commerce</a>
 
         <div className="bx bx-menu" id="menu-icon"></div>
-
+        
         <ul className="navbar">
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faq">Faq</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#shop" className="links">Shop</a></li>
+            <li><a href="#about" className="links">About</a></li>
+            <li><a href="#faq" className="links">Faq</a></li>
+            <li><a href="#contact" className="links">Contact</a></li>
         </ul>
         
         <div className="icons">

@@ -1,12 +1,30 @@
 import React from "react";
 import '../../css/login.css'
 import { useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
-const Login = () => {
+const Login = ({setIsLooged}) => {
 
   const navigate = useNavigate();
 
   let handleClick = () => {};
+
+  const {register, handleSubmit, reset} = useForm()
+
+  const submit = data => {
+    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
+    axios.post(URL, data)
+      .then(res => {
+        console.log(res.data)
+        localStorage.setItem('token',res.data.data.token)
+        setIsLooged(res.data.data.user)
+      })
+      .catch(err => console.log(err))
+    reset({
+      email: '',
+      password: ''
+    })
+  }
 
   return ( 
   <div>
@@ -16,12 +34,12 @@ const Login = () => {
             <form>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input type="email" placeholder="Enter email"></input>
+                    <input {...register('email')} type="email" placeholder="Enter email"></input>
                     <span className="col"></span>
                 </div>
                 <div className="group">
                     <i className='bx bxs-lock'></i>
-                    <input type="password" placeholder="Enter password"></input>
+                    <input {...register('password')} type="password" id="password" placeholder="Enter your password"/>
                     <span className="col"></span>
                 </div>
                 <div className="group">
