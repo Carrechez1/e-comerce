@@ -34,7 +34,7 @@ const FormLogin = ({setIsLogged}) => {
             <form onSubmit={handleSubmit(submit)}>
                 <div className="group">
                     <i className='bx bx-envelope' ></i>
-                    <input {...register('email')} type="email" placeholder="Enter email"></input>
+                    <input {...register('email')} type="email" id="email" placeholder="Enter email"></input>
                     <span className="col"></span>
                 </div>
                 <div className="group">
