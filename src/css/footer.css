@@ -1,35 +1,38 @@
-.contact{
-	padding: 30px 15%;
-	background: var(--text-color);
+.footer__cont {
+  padding-top: 120px;
 }
-.main-contact{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-	gap: 2rem;
-	margin-bottom: 3rem;
+.contact {
+  padding: 30px 15%;
+  background: var(--text-color);
 }
-.contact-content li{
-	margin-bottom: 15px;
+.main-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
-.contact-content li a{
-	display: block;
-	color: var(--bg-color);
-	font-size: var(--p-font);
-	font-weight: 600;
-	transition: all .40s ease;
+.contact-content li {
+  margin-bottom: 15px;
 }
-.contact-content li a:hover{
-	transform: translateX(-10px);
+.contact-content li a {
+  display: block;
+  color: var(--bg-color);
+  font-size: var(--p-font);
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+.contact-content li a:hover {
+  transform: translateX(-10px);
 }
 
-.footer{
-	text-align: center;
-	padding: 17px;
-	background: var(--bg-color);
+.footer {
+  text-align: center;
+  padding: 17px;
+  background: var(--bg-color);
 }
-.footer p{
-	color: var(--text-color);
-	font-size: 15px;
-	font-weight: 600;
-	letter-spacing: 2px;
+.footer p {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }

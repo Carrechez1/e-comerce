@@ -45,10 +45,7 @@ const Header = () => {
         <a className="a-btn" onClick={(handleClick = () => navigate("/login"))}>
           <i className="bx bx-user"></i>
         </a>
-        <a
-          className="a-btn"
-          onClick={(handleClick = () => navigate("/purchases"))}
-        >
+        <a className="a-btn" onClick={(handleClick = () => navigate("/cart"))}>
           <i className="bx bx-shopping-bag"></i>
         </a>
       </div>
