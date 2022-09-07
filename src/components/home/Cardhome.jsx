@@ -35,9 +35,11 @@ const Cardhome = ({ product }) => {
           <h4 className="card-home__pricetitle">Price</h4>
           <span className="card-home__priceinfo">{`$ ${product.price}`}</span>
         </section>
-        <button onClick={handleAddCart} className="card-home__btn">
+        <div className="card-home__btn-container">
+          <button onClick={handleAddCart} className="card-home__btn">
           <i className="bx bxs-cart"></i>
         </button>
+        </div>
       </div>
     </article>
   );
