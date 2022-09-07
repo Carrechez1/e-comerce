@@ -131,6 +131,7 @@
   border-radius: 50%;
   background-color: #f85555;
   color: #fff;
+  border: none;
   font-size: 2rem;
   height: 50px;
   align-self: center;
@@ -144,6 +145,7 @@
   border-radius: 50%;
   background-color: #f85555;
   color: #fff;
+  border: none;
   font-size: 2rem;
   height: 50px;
   align-self: center;
