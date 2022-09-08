@@ -35,9 +35,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/purchases" element={<Purchases />} />
-        <Route path="/cart" element={<Cart />} />
-        {/* <Route element={<ProtectedRoutes />}></Route> */}
+
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/purchases" element={<Purchases />} />
+          <Route path="/cart" element={<Cart />} />
+        </Route>
       </Routes>
       <Footer />
     </div>
